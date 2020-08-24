@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
-project(dosbox)
+
+include(cmake/VersionFromGit.cmake)
+version_from_git(INCLUDE_HASH ON)
+
+project(dosbox VERSION ${VERSION})
 
 include(CheckIncludeFileCXX)
 

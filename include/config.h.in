@@ -1,7 +1,7 @@
 #ifndef DOSBOX_CONFIG_H
 #define DOSBOX_CONFIG_H
 
-#define VERSION "SVN"
+#define VERSION "${SEMVER}"
 
 /* Define to 1 to enable internal debugger, requires libcurses */
 #define C_DEBUG 0
