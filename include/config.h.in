@@ -1,10 +1,13 @@
+#ifndef DOSBOX_CONFIG_H
+#define DOSBOX_CONFIG_H
+
 #define VERSION "SVN"
 
 /* Define to 1 to enable internal debugger, requires libcurses */
 #define C_DEBUG 0
 
 /* Define to 1 to enable output=ddraw */
-#define C_DDRAW 1 
+#define C_DDRAW 1
 
 /* Define to 1 to enable screenshots, requires libpng */
 #define C_SSHOT 1
@@ -71,8 +74,8 @@
 #define INLINE __forceinline
 #define DB_FASTCALL __fastcall
 
-#if defined(_MSC_VER) && (_MSC_VER >= 1400) 
-#pragma warning(disable : 4996) 
+#if defined(_MSC_VER) && (_MSC_VER >= 1400)
+#pragma warning(disable : 4996)
 #endif
 
 typedef double            Real64;
@@ -99,3 +102,4 @@ typedef Bit32s            Bits;
 #define sBitfs sBit32fs
 #endif
 
+#endif

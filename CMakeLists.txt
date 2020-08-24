@@ -14,6 +14,8 @@ else()
     message(FATAL_ERROR "Could not find unistd.h or io.h.")
 endif()
 
-include_directories(include)
+configure_file(include/config.h.in include/config.h)
+
+include_directories(${PROJECT_BINARY_DIR}/include include)
 
 add_executable(dosbox src/dosbox.cpp)
