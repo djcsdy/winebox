@@ -54,7 +54,7 @@ using namespace std;
 void WIN32_Console();
 #else
 #include <termios.h>
-#include <unistd.h>
+#include UNISTD_H
 static struct termios consolesettings;
 #endif
 int old_cursor_state;

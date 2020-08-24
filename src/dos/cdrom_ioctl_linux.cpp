@@ -23,7 +23,7 @@
 
 #if defined (LINUX)
 #include <fcntl.h>
-#include <unistd.h>
+#include UNISTD_H
 #include <linux/cdrom.h>
 #include <sys/ioctl.h>
 #include <sys/stat.h>

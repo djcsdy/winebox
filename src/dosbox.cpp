@@ -21,7 +21,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
-#include <unistd.h>
+#include UNISTD_H
 #include "dosbox.h"
 #include "debug.h"
 #include "cpu.h"

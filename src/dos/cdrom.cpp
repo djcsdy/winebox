@@ -23,7 +23,7 @@
 
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <unistd.h>
+#include UNISTD_H
 
 #include "dosbox.h"
 #include "SDL.h"

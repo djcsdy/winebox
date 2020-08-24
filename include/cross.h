@@ -37,7 +37,7 @@
 #define vsnprintf _vsnprintf
 #else										/* LINUX / GCC */
 #include <dirent.h>
-#include <unistd.h>
+#include UNISTD_H
 #define LONGTYPE(a) a##LL
 #endif
 

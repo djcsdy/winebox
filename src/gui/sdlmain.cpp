@@ -24,7 +24,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include <unistd.h>
+#include UNISTD_H
 #include <stdarg.h>
 #include <sys/types.h>
 #ifdef WIN32

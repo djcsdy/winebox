@@ -263,7 +263,7 @@ bool SERIAL_setCommParameters(COMPORT port,
 #include <stdlib.h>
 
 #include <termios.h>
-#include <unistd.h>
+#include UNISTD_H
 
 #include <sys/types.h>
 #include <sys/stat.h>
