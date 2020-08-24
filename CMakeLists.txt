@@ -14,4 +14,6 @@ else()
     message(FATAL_ERROR "Could not find unistd.h or io.h.")
 endif()
 
+include_directories(include)
+
 add_executable(dosbox src/dosbox.cpp)
