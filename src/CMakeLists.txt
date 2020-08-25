@@ -1,3 +1,5 @@
+include_directories(platform/visualc)
+
 add_subdirectory(cpu)
 add_subdirectory(debug)
 add_subdirectory(dos)
