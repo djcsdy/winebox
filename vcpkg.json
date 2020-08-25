@@ -3,6 +3,7 @@
   "version-string": "0.0.0-development",
   "dependencies": [
     "libpng",
-    "sdl1"
+    "sdl1",
+    "sdl1-net"
   ]
 }

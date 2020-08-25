@@ -26,6 +26,11 @@ if(NOT SDL_FOUND)
     message(FATAL_ERROR "Could not find SDL")
 endif()
 
+include(FindSDL_net)
+if(NOT SDL_NET_FOUND)
+    message(FATAL_ERROR "Could not find SDL_net")
+endif()
+
 include(FindPNG)
 if(NOT PNG_FOUND)
     message(FATAL_ERROR "Could not find libpng.")
@@ -35,6 +40,7 @@ configure_file(include/config.h.in include/config.h)
 
 add_definitions(${PNG_DEFINITIONS})
 
-include_directories(${SDL_INCLUDE_DIR} ${PNG_INCLUDE_DIRS} ${PROJECT_BINARY_DIR}/include include)
+include_directories(${SDL_INCLUDE_DIR} ${SDL_NET_INCLUDE_DIRS}
+        ${PNG_INCLUDE_DIRS} ${PROJECT_BINARY_DIR}/include include)
 
 add_subdirectory(src)
