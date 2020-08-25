@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake
+        CACHE STRING "Vcpkg toolchain file")
+
 include(cmake/VersionFromGit.cmake)
 version_from_git(INCLUDE_HASH ON)
 
@@ -20,6 +23,8 @@ endif()
 
 configure_file(include/config.h.in include/config.h)
 
-include_directories(${PROJECT_BINARY_DIR}/include include)
+include(FindSDL)
+
+include_directories(${SDL_INCLUDE_DIR} ${PROJECT_BINARY_DIR}/include include)
 
 add_subdirectory(src)

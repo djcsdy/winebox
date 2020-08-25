@@ -1,0 +1,7 @@
+{
+  "name": "dosbox",
+  "version-string": "0.0.0-development",
+  "dependencies": [
+    "sdl1"
+  ]
+}
