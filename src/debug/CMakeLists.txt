@@ -1,0 +1,1 @@
+add_library(debug debug.cpp debug_gui.cpp debug_disasm.cpp)

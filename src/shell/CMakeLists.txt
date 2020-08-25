@@ -1,0 +1,1 @@
+add_library(shell shell.cpp shell_batch.cpp shell_cmds.cpp shell_misc.cpp)

@@ -1,0 +1,1 @@
+add_library(misc cross.cpp messages.cpp programs.cpp setup.cpp support.cpp)

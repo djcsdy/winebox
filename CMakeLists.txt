@@ -22,4 +22,4 @@ configure_file(include/config.h.in include/config.h)
 
 include_directories(${PROJECT_BINARY_DIR}/include include)
 
-add_executable(dosbox src/dosbox.cpp)
+add_subdirectory(src)
