@@ -17,5 +17,5 @@ target_link_libraries(dosbox cpu debug dos fpu gui hardware ints misc shell
         OpenGL::GL)
 
 if (WIN32)
-    target_link_libraries(dosbox winmm)
+    target_link_libraries(dosbox winmm ws2_32)
 endif()
