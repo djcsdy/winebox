@@ -21,6 +21,11 @@ else()
     message(FATAL_ERROR "Could not find unistd.h or io.h.")
 endif()
 
+include(FindOpenGL)
+if (NOT OpenGL_OpenGL_FOUND)
+    message(FATAL_ERROR "Could not find OpenGL")
+endif()
+
 include(FindSDL)
 if(NOT SDL_FOUND)
     message(FATAL_ERROR "Could not find SDL")
@@ -41,6 +46,7 @@ configure_file(include/config.h.in include/config.h)
 add_definitions(${PNG_DEFINITIONS})
 
 include_directories(${SDL_INCLUDE_DIR} ${SDL_NET_INCLUDE_DIRS}
-        ${PNG_INCLUDE_DIRS} ${PROJECT_BINARY_DIR}/include include)
+        ${PNG_INCLUDE_DIRS} ${OPENGL_INCLUDE_DIR} ${PROJECT_BINARY_DIR}/include
+        include)
 
 add_subdirectory(src)

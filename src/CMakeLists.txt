@@ -13,4 +13,5 @@ add_subdirectory(shell)
 
 add_executable(dosbox dosbox.cpp winres.rc)
 target_link_libraries(dosbox cpu debug dos fpu gui hardware ints misc shell
-        mame serial gui_tk ${SDL_LIBRARY} ${SDL_NET_LIBRARIES} ${PNG_LIBRARIES})
+        mame serial gui_tk ${SDL_LIBRARY} ${SDL_NET_LIBRARIES} ${PNG_LIBRARIES}
+        OpenGL::GL)
