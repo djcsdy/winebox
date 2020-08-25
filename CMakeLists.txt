@@ -24,6 +24,9 @@ endif()
 configure_file(include/config.h.in include/config.h)
 
 include(FindSDL)
+if(NOT SDL_FOUND)
+    message(FATAL_ERROR "Could not find SDL")
+endif()
 
 include(FindPNG)
 if(NOT PNG_FOUND)
