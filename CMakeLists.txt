@@ -25,6 +25,13 @@ configure_file(include/config.h.in include/config.h)
 
 include(FindSDL)
 
-include_directories(${SDL_INCLUDE_DIR} ${PROJECT_BINARY_DIR}/include include)
+include(FindPNG)
+if(NOT PNG_FOUND)
+    message(FATAL_ERROR "Could not find libpng.")
+endif()
+
+add_definitions(${PNG_DEFINITIONS})
+
+include_directories(${SDL_INCLUDE_DIR} ${PNG_INCLUDE_DIRS} ${PROJECT_BINARY_DIR}/include include)
 
 add_subdirectory(src)

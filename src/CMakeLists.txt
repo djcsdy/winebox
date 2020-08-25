@@ -13,4 +13,4 @@ add_subdirectory(shell)
 
 add_executable(dosbox dosbox.cpp)
 target_link_libraries(dosbox cpu debug dos fpu gui hardware ints misc shell
-        mame serial gui_tk ${SDL_LIBRARY})
+        mame serial gui_tk ${SDL_LIBRARY} ${PNG_LIBRARIES})
