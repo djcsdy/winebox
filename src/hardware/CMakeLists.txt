@@ -1,3 +1,6 @@
+add_subdirectory(mame)
+add_subdirectory(serialport)
+
 add_library(hardware adlib.cpp dma.cpp gameblaster.cpp hardware.cpp
         iohandler.cpp joystick.cpp keyboard.cpp memory.cpp mixer.cpp
         pcspeaker.cpp pci_bus.cpp pic.cpp sblaster.cpp tandy_sound.cpp
