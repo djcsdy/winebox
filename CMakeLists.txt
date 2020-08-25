@@ -21,8 +21,6 @@ else()
     message(FATAL_ERROR "Could not find unistd.h or io.h.")
 endif()
 
-configure_file(include/config.h.in include/config.h)
-
 include(FindSDL)
 if(NOT SDL_FOUND)
     message(FATAL_ERROR "Could not find SDL")
@@ -32,6 +30,8 @@ include(FindPNG)
 if(NOT PNG_FOUND)
     message(FATAL_ERROR "Could not find libpng.")
 endif()
+
+configure_file(include/config.h.in include/config.h)
 
 add_definitions(${PNG_DEFINITIONS})
 
